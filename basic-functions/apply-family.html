@@ -40,7 +40,7 @@
     
 
         
-    <div class="book" data-level="5.10" data-basepath=".." data-revision="Wed Apr 22 2015 11:38:57 GMT+0800 (China Standard Time)">
+    <div class="book" data-level="5.10" data-basepath=".." data-revision="Wed Apr 22 2015 20:42:05 GMT+0800 (China Standard Time)">
     
 
 <div class="book-summary">
@@ -1564,8 +1564,8 @@ $a3
 <p>Despite this, the code is quite straightforward. For each element <code>s</code> in <code>students</code>, the function decides the type of the student, and pastes his or her interests together separated by comma, and put the information in a certain format we want.</p>
 <p>Fortunately, a major part of how we use <code>lapply</code> also works with other apply-family functions, but their iterating mechanism or the type of results may be different.</p>
 <h2 id="sapply">sapply</h2>
-<p>List is not always a favorable way to collect the results. Sometimes we want the results to be put in a simple vector or a matrix. <code>sapply</code> simplifies the result according to its structure.</p>
-<p>Suppose we apply a square on each element of <code>1:10</code>. If we do it with <code>lapply</code>, we will have a list of squared numbers. However, we might want to keep the results still as a vector.</p>
+<p>List is not always a favorable container of the results. Sometimes we want the results to be put in a simple vector or a matrix. <code>sapply</code> simplifies the result according to its structure.</p>
+<p>Suppose we apply a square on each element of <code>1:10</code>. If we do it with <code>lapply</code>, we will have a list of squared numbers. This result looks a bit heavy and redundant because the resulted list is actually a list of single-valued numeric vectors. However, we might want to keep the results still as a vector.</p>
 <pre><code class="lang-r">sapply(<span class="hljs-number">1</span>:<span class="hljs-number">10</span>, <span class="hljs-keyword">function</span>(i) i^<span class="hljs-number">2</span>)
 </code></pre>
 <pre><code> [1]   1   4   9  16  25  36  49  64  81 100
@@ -1576,7 +1576,27 @@ $a3
 [1,]    1    2    3    4    5    6    7    8    9    10
 [2,]    1    4    9   16   25   36   49   64   81   100
 </code></pre><h2 id="vapply">vapply</h2>
-<p><code>vapply</code> is the safer version of <code>sapply</code>. </p>
+<p><code>sapply</code> is very handy and smart, but sometimes the smartness may become a downside risk. Suppose we have a list of input numbers. </p>
+<pre><code class="lang-r">x &lt;- list(<span class="hljs-number">1</span>, <span class="hljs-number">5</span>, <span class="hljs-number">2</span>, c(<span class="hljs-number">2</span>,<span class="hljs-number">3</span>), <span class="hljs-number">4</span>)
+</code></pre>
+<p>If we want to get a numeric vector of the squared numbers for each number in <code>x</code>, <code>sapply</code> can be easy to use.</p>
+<pre><code class="lang-r">sapply(x, <span class="hljs-string">&quot;^&quot;</span>, <span class="hljs-number">2</span>)
+</code></pre>
+<pre><code>[[1]]
+[1] 1
+
+[[2]]
+[1] 25
+
+[[3]]
+[1] 4
+
+[[4]]
+[1] 4 9
+
+[[5]]
+[1] 16
+</code></pre><p><code>vapply</code> is the safer version of <code>sapply</code>. </p>
 <pre><code class="lang-r">vapply(<span class="hljs-number">1</span>:<span class="hljs-number">10</span>, <span class="hljs-keyword">function</span>(i) c(i,i^<span class="hljs-number">2</span>), numeric(<span class="hljs-number">2</span>))
 </code></pre>
 <pre><code>     [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10]

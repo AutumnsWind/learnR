@@ -40,7 +40,7 @@
     
 
         
-    <div class="book" data-level="3.1" data-basepath=".." data-revision="Wed Apr 22 2015 11:38:57 GMT+0800 (China Standard Time)">
+    <div class="book" data-level="3.1" data-basepath=".." data-revision="Wed Apr 22 2015 20:42:05 GMT+0800 (China Standard Time)">
     
 
 <div class="book-summary">
@@ -1502,7 +1502,7 @@
                     
                         <h1 id="vector">Vector</h1>
 <p>A vector is a group of primitive values of the same type. It can be a group of numbers, true/false values, texts, and values of some other type. It is one of the building blocks of all R objects. </p>
-<p>There are several types of vectors in R. They distinct from each other in the type of entries they hold. Here we will see the most commonly used types of vectors including numeric vector, logical vector, character vector, and so on.</p>
+<p>There are several types of vectors in R. They are distinct from each other in the type of entries they hold. Here we will see the most commonly used types of vectors including numeric vector, logical vector, character vector, and so on.</p>
 <h2 id="numeric-vector">Numeric vector</h2>
 <p>There are multiple ways to define a numeric vector.</p>
 <p>A scalar number is the simplest numeric vector. It&apos;s special only because its length is one.</p>
@@ -1569,7 +1569,7 @@
 </code></pre><pre><code class="lang-r">&gt; c(<span class="hljs-number">2</span>,<span class="hljs-number">3</span>) &gt; c(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,-<span class="hljs-number">1</span>,<span class="hljs-number">3</span>)
 </code></pre>
 <pre><code>[1]  TRUE  TRUE  TRUE FALSE
-</code></pre><p>The computing mechanism is asking the following questions iteratively: <code>1&gt;2?</code>, <code>2&gt;3?</code>, <code>-1&gt;2?</code>, <code>3&gt;3?</code>. In other words, the shorter vector will rotate to finish all the comparisons for each entry in the longer vector.</p>
+</code></pre><p>The computing mechanism is asking the following questions iteratively: <code>2&gt;1?</code>, <code>3&gt;2?</code>, <code>2&gt;-1?</code>, <code>3&gt;3?</code>. In other words, the shorter vector will rotate to finish all the comparisons for each entry in the longer vector.</p>
 <p>In R, several logical binary operators are defined, such as <code>==</code> to denote <em>equality</em>, <code>&gt;</code> <em>greater-than</em>, <code>&gt;=</code> <em>greater-or-equals-to</em>, <code>&lt;</code> <em>less-than</em>, <code>&lt;=</code> <em>less-than-or-equals-to</em>. Moreover, R provides some other additional logical operators like <code>%in%</code> to tell whether each entry in the left-hand side vector is contained by the right-hand side vector.</p>
 <pre><code class="lang-r">&gt; <span class="hljs-number">1</span> %<span class="hljs-keyword">in</span>% c(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>)
 </code></pre>
