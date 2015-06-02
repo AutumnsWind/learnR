@@ -41,6 +41,6 @@ If you have any problems using R, just google what puzzles your mind, there are 
 
 #### It's cutting-edge
 
-Many R users are professional researchers in statistics, econometrics, or other displines. It is more often that an author publishes his or her new paper along with a new package that includes the cutting-edge techniques presented in the paper. Maybe it's a new statistical test, a pattern recognition method, or a better-tuned optimization algorithm. 
+Many R users are professional researchers in statistics, econometrics, or other disciplines. It is more often that an author publishes his or her new paper along with a new package that includes the cutting-edge techniques presented in the paper. Maybe it's a new statistical test, a pattern recognition method, or a better-tuned optimization algorithm. 
 
 No matter what it is, R community has the previledge to be early, if not the first, to apply cutting-edge data-science knowledge in real world, improve its functionality, and reveal its potentials.
